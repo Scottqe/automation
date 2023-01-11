@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.7.2 on darwin)" generated="20230103 17:01:32.354" rpa="false" schemaversion="2">
+<suite id="s1" name="Ios" source="/Users/qlieer/Desktop/automation/automation/ios">
+<suite id="s1-s1" name="Integration" source="/Users/qlieer/Desktop/automation/automation/ios/integration">
+<suite id="s1-s1-s1" name="Checkout" source="/Users/qlieer/Desktop/automation/automation/ios/integration/Checkout.robot">
+<kw name="SuiteSetup" type="SETUP">
+<kw name="Open Default Application" library="keywords_common">
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${REMOTE}'=='${NONE}'</arg>
+<arg>Open Local Application</arg>
+<arg>ELSE</arg>
+<arg>Open Remote Application</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Open Local Application" library="keywords_common">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=${automationName}</arg>
+<arg>platformName=${platformName}</arg>
+<arg>bundleId=com.qlieer.aphrodite.pos.stage</arg>
+<arg>xcodeOrgId=QRP2NT8BR4</arg>
+<arg>xcodeSigningId=Apple Developement</arg>
+<arg>udid=6c67ec2bae7e1612598107197e721b5bca87243f</arg>
+<arg>deviceName=iPad</arg>
+<arg>platformVersion=14.8</arg>
+<arg>newCommandTimeout=0</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20230103 17:01:32.570" endtime="20230103 17:01:36.036"/>
+</kw>
+<status status="PASS" starttime="20230103 17:01:32.570" endtime="20230103 17:01:36.036"/>
+</kw>
+<status status="PASS" starttime="20230103 17:01:32.569" endtime="20230103 17:01:36.036"/>
+</kw>
+<status status="PASS" starttime="20230103 17:01:32.569" endtime="20230103 17:01:36.036"/>
+</kw>
+<status status="PASS" starttime="20230103 17:01:32.569" endtime="20230103 17:01:36.036"/>
+</kw>
+<test id="s1-s1-s1-t1" name="Checkout With Discount Should Success">
+<kw name="Click Canlender Block Button" library="keywords_common">
+<arg>0</arg>
+<doc>Click Canlender Block Button</doc>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230103 17:01:41.040" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230103 17:01:36.038" endtime="20230103 17:01:41.040"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//XCUIElementTypeCell[@name="ScheduleEventCell_${index}"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230103 17:01:41.047" level="INFO">Clicking element '//XCUIElementTypeCell[@name="ScheduleEventCell_0"]'.</msg>
+<status status="PASS" starttime="20230103 17:01:41.041" endtime="20230103 17:01:46.859"/>
+</kw>
+<status status="PASS" starttime="20230103 17:01:36.037" endtime="20230103 17:01:46.859"/>
+</kw>
+<kw name="Click Direct Checkout in Appointment View Page" library="keywords_checkout">
+<doc>Click Direct Checkout in Appointment View Page</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>//XCUIElementTypeButton[@name="AppointmentPreview_directCheckout"]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20230103 17:01:46.860" endtime="20230103 17:01:52.466"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//XCUIElementTypeButton[@name="AppointmentPreview_directCheckout"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230103 17:01:52.468" level="INFO">Clicking element '//XCUIElementTypeButton[@name="AppointmentPreview_directCheckout"]'.</msg>
+<status status="PASS" starttime="20230103 17:01:52.466" endtime="20230103 17:01:59.812"/>
+</kw>
+<status status="PASS" starttime="20230103 17:01:46.860" endtime="20230103 17:01:59.812"/>
+</kw>
+<kw name="Click Choose Discount In Checkout Page" library="keywords_checkout">
+<doc>Click Choose Discount In Checkout Page</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>//XCUIElementTypeButton[@name="AddOtherCell_detailBtn_discount"]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20230103 17:01:59.813" endtime="20230103 17:02:05.700"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//XCUIElementTypeButton[@name="AddOtherCell_detailBtn_discount"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230103 17:02:05.702" level="INFO">Clicking element '//XCUIElementTypeButton[@name="AddOtherCell_detailBtn_discount"]'.</msg>
+<status status="PASS" starttime="20230103 17:02:05.700" endtime="20230103 17:02:12.180"/>
+</kw>
+<status status="PASS" starttime="20230103 17:01:59.813" endtime="20230103 17:02:12.180"/>
+</kw>
+<kw name="Select Discount In Choose Discount Page" library="keywords_checkout">
+<doc>Choose Discount In Full Item Discount Page</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>//XCUIElementTypeCell[@name="SelectionDiscountsViewController_discountCell_0"]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20230103 17:02:12.181" endtime="20230103 17:02:19.173"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//XCUIElementTypeCell[@name="SelectionDiscountsViewController_discountCell_0"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230103 17:02:19.178" level="INFO">Clicking element '//XCUIElementTypeCell[@name="SelectionDiscountsViewController_discountCell_0"]'.</msg>
+<status status="PASS" starttime="20230103 17:02:19.173" endtime="20230103 17:02:25.422"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>//XCUIElementTypeButton[@name="SelectionDiscountsViewController_confirmBtn"]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20230103 17:02:25.422" endtime="20230103 17:02:32.018"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//XCUIElementTypeButton[@name="SelectionDiscountsViewController_confirmBtn"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230103 17:02:32.021" level="INFO">Clicking element '//XCUIElementTypeButton[@name="SelectionDiscountsViewController_confirmBtn"]'.</msg>
+<status status="PASS" starttime="20230103 17:02:32.018" endtime="20230103 17:02:39.168"/>
+</kw>
+<status status="PASS" starttime="20230103 17:02:12.181" endtime="20230103 17:02:39.168"/>
+</kw>
+<kw name="Verify Discount Price (50% off)" library="keywords_checkout">
+<doc>Verify Checkout Price</doc>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${text}</var>
+<arg>//XCUIElementTypeStaticText[@name="$ 600"]</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20230103 17:02:45.633" level="INFO">Element '//XCUIElementTypeStaticText[@name="$ 600"]' text is '$ 600' </msg>
+<msg timestamp="20230103 17:02:45.633" level="INFO">${text} = $ 600</msg>
+<status status="PASS" starttime="20230103 17:02:39.169" endtime="20230103 17:02:45.633"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${total}</var>
+<arg>'${text}'.replace('$','').strip()</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230103 17:02:45.638" level="INFO">${total} = 600</msg>
+<status status="PASS" starttime="20230103 17:02:45.633" endtime="20230103 17:02:45.638"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${total}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20230103 17:02:45.638" level="INFO">${total} = 600</msg>
+<status status="PASS" starttime="20230103 17:02:45.638" endtime="20230103 17:02:45.638"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${total}</var>
+<arg>int(${total} * 0.5)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230103 17:02:45.639" level="INFO">${total} = 300</msg>
+<status status="PASS" starttime="20230103 17:02:45.638" endtime="20230103 17:02:45.639"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${item1}</arg>
+<arg>${total}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20230103 17:02:45.641" level="FAIL">Variable '${item1}' not found.</msg>
+<status status="FAIL" starttime="20230103 17:02:45.639" endtime="20230103 17:02:45.641"/>
+</kw>
+<status status="FAIL" starttime="20230103 17:02:39.168" endtime="20230103 17:02:45.642"/>
+</kw>
+<status status="FAIL" starttime="20230103 17:01:36.037" endtime="20230103 17:02:45.642">Variable '${item1}' not found.</status>
+</test>
+<kw name="SuiteTeardown" type="TEARDOWN">
+<kw name="Close All Applications" library="AppiumLibrary">
+<doc>Closes all open applications.</doc>
+<status status="PASS" starttime="20230103 17:02:45.643" endtime="20230103 17:02:46.681"/>
+</kw>
+<status status="PASS" starttime="20230103 17:02:45.643" endtime="20230103 17:02:46.681"/>
+</kw>
+<doc>test app function</doc>
+<status status="FAIL" starttime="20230103 17:01:32.379" endtime="20230103 17:02:46.681"/>
+</suite>
+<status status="FAIL" starttime="20230103 17:01:32.378" endtime="20230103 17:02:46.683"/>
+</suite>
+<status status="FAIL" starttime="20230103 17:01:32.355" endtime="20230103 17:02:46.684"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Ios">Ios</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Integration">Ios.Integration</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Checkout">Ios.Integration.Checkout</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

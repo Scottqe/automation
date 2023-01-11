@@ -1,0 +1,45 @@
+{
+    "sub_project": [{
+            "testing_type": "api_internal",
+            "name": "api_internal",
+            "path": "automation/api_internal/integration",
+            "tag": "api_internal",
+            "type": "robot"
+        },
+        {
+            "testing_type": "app",
+            "name": "app",
+            "path": "automation/app/integration",
+            "tag": "app",
+            "type": "robot"
+        },
+        {
+            "testing_type": "ios",
+            "name": "ios",
+            "path": "automation/ios/integration",
+            "tag": "ios",
+            "type": "robot"
+        },
+        {
+            "testing_type": "web",
+            "name": "web",
+            "path": "automation/web/integration",
+            "tag": "web",
+            "type": "robot"
+        },
+        {
+            "testing_type": "game",
+            "name": "game",
+            "path": "automation/game/integration",
+            "tag": "game",
+            "type": "robot"
+        },
+        {
+            "testing_type": "security",
+            "name": "security",
+            "path": "automation/security/integration",
+            "tag": "security",
+            "type": "robot"
+        }
+    ]
+}
