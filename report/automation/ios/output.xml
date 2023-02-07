@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.2 (Python 3.7.2 on darwin)" generated="20230118 16:32:20.863" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.2 (Python 3.7.2 on darwin)" generated="20230203 17:52:49.689" rpa="false" schemaversion="2">
 <suite id="s1" name="Ios" source="/Users/qlieer/Desktop/automation/automation/ios">
 <suite id="s1-s1" name="Integration" source="/Users/qlieer/Desktop/automation/automation/ios/integration">
 <suite id="s1-s1-s1" name="Checkout" source="/Users/qlieer/Desktop/automation/automation/ios/integration/Checkout.robot">
@@ -29,163 +29,311 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | *Option*            | *Man.* | *Description*     |
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |</doc>
-<status status="PASS" starttime="20230118 16:32:21.186" endtime="20230118 16:32:23.687"/>
+<status status="PASS" starttime="20230203 17:52:49.982" endtime="20230203 17:52:53.399"/>
 </kw>
-<status status="PASS" starttime="20230118 16:32:21.186" endtime="20230118 16:32:23.687"/>
+<status status="PASS" starttime="20230203 17:52:49.981" endtime="20230203 17:52:53.399"/>
 </kw>
-<status status="PASS" starttime="20230118 16:32:21.185" endtime="20230118 16:32:23.687"/>
+<status status="PASS" starttime="20230203 17:52:49.981" endtime="20230203 17:52:53.399"/>
 </kw>
-<status status="PASS" starttime="20230118 16:32:21.185" endtime="20230118 16:32:23.687"/>
+<status status="PASS" starttime="20230203 17:52:49.981" endtime="20230203 17:52:53.400"/>
 </kw>
-<status status="PASS" starttime="20230118 16:32:21.185" endtime="20230118 16:32:23.688"/>
+<status status="PASS" starttime="20230203 17:52:49.981" endtime="20230203 17:52:53.400"/>
 </kw>
 <test id="s1-s1-s1-t1" name="Checkout With Discount Should Success">
+<kw name="Add A New Appointment Without Customer" type="SETUP">
+<kw name="Click Calender + Button" library="keywords_common">
+<doc>Click canlender + Button</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>//XCUIElementTypeButton[@name="AppointmentsScheduleViewController_addBtn"]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20230203 17:52:53.402" endtime="20230203 17:53:02.235"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//XCUIElementTypeButton[@name="AppointmentsScheduleViewController_addBtn"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230203 17:53:02.240" level="INFO">Clicking element '//XCUIElementTypeButton[@name="AppointmentsScheduleViewController_addBtn"]'.</msg>
+<status status="PASS" starttime="20230203 17:53:02.235" endtime="20230203 17:53:07.342"/>
+</kw>
+<status status="PASS" starttime="20230203 17:52:53.402" endtime="20230203 17:53:07.342"/>
+</kw>
+<kw name="Click Add Appointment Button" library="keywords_appointment">
+<doc>Click Add Appointment Button</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>//XCUIElementTypeCell[@name="AppointmentsScheduleViewController_addAppointment"]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20230203 17:53:07.343" endtime="20230203 17:53:13.970"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//XCUIElementTypeCell[@name="AppointmentsScheduleViewController_addAppointment"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230203 17:53:13.972" level="INFO">Clicking element '//XCUIElementTypeCell[@name="AppointmentsScheduleViewController_addAppointment"]'.</msg>
+<status status="PASS" starttime="20230203 17:53:13.970" endtime="20230203 17:53:21.303"/>
+</kw>
+<status status="PASS" starttime="20230203 17:53:07.343" endtime="20230203 17:53:21.303"/>
+</kw>
+<kw name="Click Add Item Button" library="keywords_appointment">
+<doc>Click Add Item Button</doc>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230203 17:53:26.307" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230203 17:53:21.305" endtime="20230203 17:53:26.307"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>//XCUIElementTypeButton[@name="AddEventsCollectionViewCell_addBtn"]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20230203 17:53:26.308" endtime="20230203 17:53:33.663"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//XCUIElementTypeButton[@name="AddEventsCollectionViewCell_addBtn"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230203 17:53:33.666" level="INFO">Clicking element '//XCUIElementTypeButton[@name="AddEventsCollectionViewCell_addBtn"]'.</msg>
+<status status="PASS" starttime="20230203 17:53:33.663" endtime="20230203 17:53:41.250"/>
+</kw>
+<status status="PASS" starttime="20230203 17:53:21.304" endtime="20230203 17:53:41.250"/>
+</kw>
+<kw name="Click Select Item Button" library="keywords_appointment">
+<doc>Click Select Item Button</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>//XCUIElementTypeCell[@name="ProductListCell_productSelectionList_${index}"]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20230203 17:53:41.251" endtime="20230203 17:53:50.305"/>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${text}</var>
+<arg>name=ProductListCell_priceLabel_${index2}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20230203 17:53:52.235" level="INFO">Element 'name=ProductListCell_priceLabel_1' text is '$ 600' </msg>
+<msg timestamp="20230203 17:53:52.235" level="INFO">${text} = $ 600</msg>
+<status status="PASS" starttime="20230203 17:53:50.306" endtime="20230203 17:53:52.235"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${item1}</var>
+<arg>'${text}'.replace('$','').strip()</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230203 17:53:52.239" level="INFO">${item1} = 600</msg>
+<status status="PASS" starttime="20230203 17:53:52.235" endtime="20230203 17:53:52.239"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${item1}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20230203 17:53:52.240" level="INFO">${item1} = 600</msg>
+<status status="PASS" starttime="20230203 17:53:52.240" endtime="20230203 17:53:52.240"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//XCUIElementTypeCell[@name="ProductListCell_productSelectionList_${index}"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230203 17:53:52.243" level="INFO">Clicking element '//XCUIElementTypeCell[@name="ProductListCell_productSelectionList_1"]'.</msg>
+<status status="PASS" starttime="20230203 17:53:52.240" endtime="20230203 17:54:01.488"/>
+</kw>
+<status status="PASS" starttime="20230203 17:53:41.250" endtime="20230203 17:54:01.488"/>
+</kw>
+<kw name="Click Appointment Confirm Button" library="keywords_appointment">
+<doc>Click Appointment Confirm Button</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>//XCUIElementTypeStaticText[@name="${buttonName}"]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20230203 17:54:01.489" endtime="20230203 17:54:10.523"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//XCUIElementTypeStaticText[@name="${buttonName}"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230203 17:54:10.527" level="INFO">Clicking element '//XCUIElementTypeStaticText[@name="確認新增"]'.</msg>
+<status status="PASS" starttime="20230203 17:54:10.523" endtime="20230203 17:54:19.276"/>
+</kw>
+<status status="PASS" starttime="20230203 17:54:01.489" endtime="20230203 17:54:19.276"/>
+</kw>
+<status status="PASS" starttime="20230203 17:52:53.401" endtime="20230203 17:54:19.277"/>
+</kw>
 <kw name="Click Canlender Block Button" library="keywords_common">
-<arg>0</arg>
+<arg>6</arg>
 <doc>Click Canlender Block Button</doc>
 <kw name="Sleep" library="BuiltIn">
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230118 16:32:28.691" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230118 16:32:23.690" endtime="20230118 16:32:28.691"/>
+<msg timestamp="20230203 17:54:24.281" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230203 17:54:19.278" endtime="20230203 17:54:24.281"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <arg>//XCUIElementTypeCell[@name="ScheduleEventCell_${index}"]</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20230118 16:32:28.699" level="INFO">Clicking element '//XCUIElementTypeCell[@name="ScheduleEventCell_0"]'.</msg>
-<status status="PASS" starttime="20230118 16:32:28.692" endtime="20230118 16:32:34.588"/>
+<msg timestamp="20230203 17:54:24.288" level="INFO">Clicking element '//XCUIElementTypeCell[@name="ScheduleEventCell_6"]'.</msg>
+<status status="PASS" starttime="20230203 17:54:24.282" endtime="20230203 17:54:30.523"/>
 </kw>
-<status status="PASS" starttime="20230118 16:32:23.689" endtime="20230118 16:32:34.589"/>
+<status status="PASS" starttime="20230203 17:54:19.277" endtime="20230203 17:54:30.523"/>
 </kw>
 <kw name="Click Direct Checkout in Appointment View Page" library="keywords_checkout">
 <doc>Click Direct Checkout in Appointment View Page</doc>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>//XCUIElementTypeButton[@name="AppointmentPreview_directCheckout"]</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20230118 16:32:34.589" endtime="20230118 16:32:41.915"/>
+<status status="PASS" starttime="20230203 17:54:30.523" endtime="20230203 17:54:36.271"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <arg>//XCUIElementTypeButton[@name="AppointmentPreview_directCheckout"]</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20230118 16:32:41.917" level="INFO">Clicking element '//XCUIElementTypeButton[@name="AppointmentPreview_directCheckout"]'.</msg>
-<status status="PASS" starttime="20230118 16:32:41.915" endtime="20230118 16:32:49.662"/>
+<msg timestamp="20230203 17:54:36.274" level="INFO">Clicking element '//XCUIElementTypeButton[@name="AppointmentPreview_directCheckout"]'.</msg>
+<status status="PASS" starttime="20230203 17:54:36.271" endtime="20230203 17:54:44.898"/>
 </kw>
-<status status="PASS" starttime="20230118 16:32:34.589" endtime="20230118 16:32:49.663"/>
+<status status="PASS" starttime="20230203 17:54:30.523" endtime="20230203 17:54:44.899"/>
 </kw>
 <kw name="Click Choose Discount In Checkout Page" library="keywords_checkout">
 <doc>Click Choose Discount In Checkout Page</doc>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>//XCUIElementTypeButton[@name="AddOtherCell_detailBtn_discount"]</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20230118 16:32:49.664" endtime="20230118 16:32:56.461"/>
+<status status="PASS" starttime="20230203 17:54:44.900" endtime="20230203 17:54:52.682"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <arg>//XCUIElementTypeButton[@name="AddOtherCell_detailBtn_discount"]</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20230118 16:32:56.463" level="INFO">Clicking element '//XCUIElementTypeButton[@name="AddOtherCell_detailBtn_discount"]'.</msg>
-<status status="PASS" starttime="20230118 16:32:56.461" endtime="20230118 16:33:05.275"/>
+<msg timestamp="20230203 17:54:52.688" level="INFO">Clicking element '//XCUIElementTypeButton[@name="AddOtherCell_detailBtn_discount"]'.</msg>
+<status status="PASS" starttime="20230203 17:54:52.682" endtime="20230203 17:55:00.855"/>
 </kw>
-<status status="PASS" starttime="20230118 16:32:49.663" endtime="20230118 16:33:05.275"/>
+<status status="PASS" starttime="20230203 17:54:44.899" endtime="20230203 17:55:00.855"/>
 </kw>
 <kw name="Select Discount In Choose Discount Page" library="keywords_checkout">
 <doc>Choose Discount In Full Item Discount Page</doc>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>//XCUIElementTypeCell[@name="SelectionDiscountsViewController_discountCell_0"]</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20230118 16:33:05.276" endtime="20230118 16:33:12.844"/>
+<status status="PASS" starttime="20230203 17:55:00.856" endtime="20230203 17:55:09.553"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <arg>//XCUIElementTypeCell[@name="SelectionDiscountsViewController_discountCell_0"]</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20230118 16:33:12.847" level="INFO">Clicking element '//XCUIElementTypeCell[@name="SelectionDiscountsViewController_discountCell_0"]'.</msg>
-<status status="PASS" starttime="20230118 16:33:12.844" endtime="20230118 16:33:22.041"/>
+<msg timestamp="20230203 17:55:09.558" level="INFO">Clicking element '//XCUIElementTypeCell[@name="SelectionDiscountsViewController_discountCell_0"]'.</msg>
+<status status="PASS" starttime="20230203 17:55:09.554" endtime="20230203 17:55:18.660"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>//XCUIElementTypeButton[@name="SelectionDiscountsViewController_confirmBtn"]</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20230118 16:33:22.041" endtime="20230118 16:33:29.053"/>
+<status status="PASS" starttime="20230203 17:55:18.660" endtime="20230203 17:55:27.215"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <arg>//XCUIElementTypeButton[@name="SelectionDiscountsViewController_confirmBtn"]</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20230118 16:33:29.055" level="INFO">Clicking element '//XCUIElementTypeButton[@name="SelectionDiscountsViewController_confirmBtn"]'.</msg>
-<status status="PASS" starttime="20230118 16:33:29.053" endtime="20230118 16:33:37.655"/>
+<msg timestamp="20230203 17:55:27.218" level="INFO">Clicking element '//XCUIElementTypeButton[@name="SelectionDiscountsViewController_confirmBtn"]'.</msg>
+<status status="PASS" starttime="20230203 17:55:27.216" endtime="20230203 17:55:36.354"/>
 </kw>
-<status status="PASS" starttime="20230118 16:33:05.275" endtime="20230118 16:33:37.655"/>
+<status status="PASS" starttime="20230203 17:55:00.855" endtime="20230203 17:55:36.354"/>
 </kw>
 <kw name="Verify Discount Price (50% off)" library="keywords_checkout">
 <doc>Verify Checkout Price</doc>
 <kw name="Get Text" library="AppiumLibrary">
 <var>${text}</var>
-<arg>//XCUIElementTypeStaticText[@name="ProductListCell_priceLabel_${index}"]</arg>
+<arg>///XCUIElementTypeStaticText[@name="CheckoutViewController_totalAmountPriceLabel"]</arg>
 <doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
-<kw name="Capture Page Screenshot" library="AppiumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20230118 16:33:43.276" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20230118 16:33:42.936" endtime="20230118 16:33:43.276"/>
-</kw>
-<msg timestamp="20230118 16:33:43.280" level="FAIL">ValueError: Element locator '//XCUIElementTypeStaticText[@name="ProductListCell_priceLabel_1"]' did not match any elements.</msg>
-<status status="FAIL" starttime="20230118 16:33:37.656" endtime="20230118 16:33:43.280"/>
+<msg timestamp="20230203 17:55:45.272" level="INFO">Element '///XCUIElementTypeStaticText[@name="CheckoutViewController_totalAmountPriceLabel"]' text is '$ 300' </msg>
+<msg timestamp="20230203 17:55:45.273" level="INFO">${text} = $ 300</msg>
+<status status="PASS" starttime="20230203 17:55:36.355" endtime="20230203 17:55:45.273"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${total}</var>
 <arg>'${text}'.replace('$','').strip()</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20230118 16:33:43.281" endtime="20230118 16:33:43.281"/>
+<msg timestamp="20230203 17:55:45.273" level="INFO">${total} = 300</msg>
+<status status="PASS" starttime="20230203 17:55:45.273" endtime="20230203 17:55:45.273"/>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${total}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<status status="NOT RUN" starttime="20230118 16:33:43.281" endtime="20230118 16:33:43.281"/>
+<msg timestamp="20230203 17:55:45.274" level="INFO">${total} = 300</msg>
+<status status="PASS" starttime="20230203 17:55:45.273" endtime="20230203 17:55:45.274"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
-<var>${total}</var>
-<arg>int(${total} * 0.5)</arg>
+<var>${item1}</var>
+<arg>int(0.5*${item1})</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20230118 16:33:43.281" endtime="20230118 16:33:43.281"/>
+<msg timestamp="20230203 17:55:45.274" level="INFO">${item1} = 300</msg>
+<status status="PASS" starttime="20230203 17:55:45.274" endtime="20230203 17:55:45.274"/>
 </kw>
-<status status="FAIL" starttime="20230118 16:33:37.656" endtime="20230118 16:33:43.282"/>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${item1}</arg>
+<arg>${total}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20230203 17:55:45.274" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20230203 17:55:45.274" endtime="20230203 17:55:45.275"/>
+</kw>
+<status status="PASS" starttime="20230203 17:55:36.354" endtime="20230203 17:55:45.275"/>
 </kw>
 <kw name="Swipe Checkout Button" library="keywords_checkout">
 <doc>Swipe Checkout Button</doc>
-<status status="NOT RUN" starttime="20230118 16:33:43.282" endtime="20230118 16:33:43.282"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230203 17:55:48.276" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230203 17:55:45.275" endtime="20230203 17:55:48.277"/>
+</kw>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>${start_x}</arg>
+<arg>${start_y}</arg>
+<arg>${offset_x}</arg>
+<arg>${offset_y}</arg>
+<arg>${duration}</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20230203 17:55:48.277" endtime="20230203 17:55:49.900"/>
+</kw>
+<status status="PASS" starttime="20230203 17:55:45.275" endtime="20230203 17:55:49.900"/>
 </kw>
 <kw name="Verify Checkout Should Success" library="keywords_checkout">
 <doc>Verify Checkout Should Success</doc>
-<status status="NOT RUN" starttime="20230118 16:33:43.282" endtime="20230118 16:33:43.282"/>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>//XCUIElementTypeStaticText[@name="付款完成"]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20230203 17:55:49.901" endtime="20230203 17:55:58.601"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//XCUIElementTypeButton[@name="CheckoutResultViewController_completeBtn"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230203 17:55:58.603" level="INFO">Clicking element '//XCUIElementTypeButton[@name="CheckoutResultViewController_completeBtn"]'.</msg>
+<status status="PASS" starttime="20230203 17:55:58.601" endtime="20230203 17:56:08.210"/>
+</kw>
+<kw name="Element Should Be Enabled" library="AppiumLibrary">
+<arg>//XCUIElementTypeOther[@name="ScheduleEventCell_0"]/XCUIElementTypeOther/XCUIElementTypeOther</arg>
+<doc>Verifies that element identified with locator is enabled.</doc>
+<msg timestamp="20230203 17:56:13.410" level="INFO">Element '//XCUIElementTypeOther[@name="ScheduleEventCell_0"]/XCUIElementTypeOther/XCUIElementTypeOther' is enabled .</msg>
+<status status="PASS" starttime="20230203 17:56:08.210" endtime="20230203 17:56:13.410"/>
+</kw>
+<status status="PASS" starttime="20230203 17:55:49.901" endtime="20230203 17:56:13.410"/>
 </kw>
 <kw name="Close All Applications" library="AppiumLibrary" type="TEARDOWN">
 <doc>Closes all open applications.</doc>
-<status status="PASS" starttime="20230118 16:33:43.283" endtime="20230118 16:33:44.357"/>
+<status status="PASS" starttime="20230203 17:56:13.410" endtime="20230203 17:56:14.437"/>
 </kw>
-<status status="FAIL" starttime="20230118 16:32:23.688" endtime="20230118 16:33:44.358">ValueError: Element locator '//XCUIElementTypeStaticText[@name="ProductListCell_priceLabel_1"]' did not match any elements.</status>
+<status status="PASS" starttime="20230203 17:52:53.400" endtime="20230203 17:56:14.437"/>
 </test>
 <kw name="SuiteTeardown" type="TEARDOWN">
 <kw name="Close All Applications" library="AppiumLibrary">
 <doc>Closes all open applications.</doc>
-<status status="PASS" starttime="20230118 16:33:44.359" endtime="20230118 16:33:44.361"/>
+<status status="PASS" starttime="20230203 17:56:14.438" endtime="20230203 17:56:14.442"/>
 </kw>
-<status status="PASS" starttime="20230118 16:33:44.358" endtime="20230118 16:33:44.361"/>
+<status status="PASS" starttime="20230203 17:56:14.438" endtime="20230203 17:56:14.442"/>
 </kw>
 <doc>test app function</doc>
-<status status="FAIL" starttime="20230118 16:32:20.890" endtime="20230118 16:33:44.361"/>
+<status status="PASS" starttime="20230203 17:52:49.715" endtime="20230203 17:56:14.443"/>
 </suite>
-<status status="FAIL" starttime="20230118 16:32:20.888" endtime="20230118 16:33:44.363"/>
+<status status="PASS" starttime="20230203 17:52:49.713" endtime="20230203 17:56:14.444"/>
 </suite>
-<status status="FAIL" starttime="20230118 16:32:20.864" endtime="20230118 16:33:44.364"/>
+<status status="PASS" starttime="20230203 17:52:49.690" endtime="20230203 17:56:14.445"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Ios">Ios</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Integration">Ios.Integration</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Checkout">Ios.Integration.Checkout</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Ios">Ios</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Integration">Ios.Integration</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Checkout">Ios.Integration.Checkout</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20230203 17:52:49.883" level="ERROR">Error in resource file '/Users/qlieer/Desktop/automation/automation/ios/lib/keywords_customerManagement.robot': Creating keyword 'Input Name In Add Customer Page' failed: Invalid argument specification: Multiple errors:
+- Invalid argument syntax '${text} '.
+- Only normal arguments accept default values, dictionary arguments like '${text} ' do not.</msg>
 </errors>
 </robot>

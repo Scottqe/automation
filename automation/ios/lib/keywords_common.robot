@@ -21,6 +21,15 @@ Click Canlender Block Button
     sleep    5s
     Click Element    //XCUIElementTypeCell[@name="ScheduleEventCell_${index}"]
 
+Click Customer Management Button
+    Wait Until Element Is Visible    //XCUIElementTypeButton[@name="顧客管理"]
+    Click Element    //XCUIElementTypeButton[@name="顧客管理"]
+
+Click Menu Bar
+    [Documentation]    Click Menu Bar
+    Wait Until Element Is Visible    //XCUIElementTypeButton[@name="BaseViewController_menuBtnItem"]
+    Click Element    //XCUIElementTypeButton[@name="BaseViewController_menuBtnItem"]
+
 Click Window Close Button
     [Documentation]    Click Window Close Button
     Wait Until Element Is Visible    //XCUIElementTypeButton[@name="CancelBtnGray"]
@@ -39,8 +48,8 @@ Click Add Customer Button
     Wait Until Element Is Visible    //XCUIElementTypeCell[@name="AppointmentDetailCustomerCell_addCustomer"]
     Click Element    //XCUIElementTypeCell[@name="AppointmentDetailCustomerCell_addCustomer"]
 
-Click Add New Customer Button
-    [Documentation]    Click Add New Customer Button
+Click Add New Customer Button In Appointment Page
+    [Documentation]    Click Add New Customer Button In Appointment Page
     Wait Until Element Is Visible    //XCUIElementTypeButton[@name="新增顧客"]
     Click Element    //XCUIElementTypeButton[@name="新增顧客"]
 

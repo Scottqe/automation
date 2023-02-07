@@ -8,7 +8,7 @@ Suite Teardown    SuiteTeardown
 *** Test Cases ***
 Checkout Should Success
     [Setup]    Add A New Appointment Without Customer
-    Click Canlender Block Button    2
+    Click Canlender Block Button    1
     Click Direct Checkout in Appointment View Page
     Verify Checkout Price   
     Swipe Checkout Button
@@ -17,11 +17,11 @@ Checkout Should Success
 
 Checkout With Discount Should Success
     [Setup]    Add A New Appointment Without Customer
-    Click Canlender Block Button    0
+    Click Canlender Block Button    6
     Click Direct Checkout in Appointment View Page
     Click Choose Discount In Checkout Page
     Select Discount In Choose Discount Page
-    # Verify Discount Price (50% off)
+    Verify Discount Price (50% off)
     Swipe Checkout Button
     Verify Checkout Should Success
     [Teardown]    Close All Applications

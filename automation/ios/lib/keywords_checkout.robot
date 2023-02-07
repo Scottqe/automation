@@ -42,25 +42,22 @@ Swipe Checkout Button
 # ---- Verify ----
 Verify Checkout Price
     [Documentation]    Verify Checkout Price
-    ${text}=    Get Text    //XCUIElementTypeStaticText[@name="$ 600"]
+    ${text} =    Get Text    //XCUIElementTypeStaticText[@name="CheckoutViewController_totalAmountPriceLabel"]
     ${total} =    Evaluate    '${text}'.replace('$','').strip()
     Set Test Variable    ${total}
     Should Be Equal As Strings    ${item1}    ${total}
 
 Verify Discount Price (50% off)
     [Documentation]    Verify Checkout Price
-    [Arguments]    ${index}=1
-    ${text} =    Get Text    //XCUIElementTypeStaticText[@name="ProductListCell_priceLabel_${index}"]
+    ${text} =    Get Text    ///XCUIElementTypeStaticText[@name="CheckoutViewController_totalAmountPriceLabel"]
     ${total} =    Evaluate    '${text}'.replace('$','').strip()
     Set Test Variable    ${total}
-    ${total} =    Evaluate    int(${total} * 0.5)
+    ${item1} =    Evaluate    int(0.5*${item1})
+    Should Be Equal As Strings    ${item1}    ${total}
 
 Verify Checkout Should Success
     [Documentation]    Verify Checkout Should Success
-    [Arguments]    ${text}=付款完成
-    Page Should Contain Text    ${text}
-    Wait Until Element Is Visible    //XCUIElementTypeButton[@name="CheckoutResultViewController_completeBtn"]
+    Wait Until Element Is Visible    //XCUIElementTypeStaticText[@name="付款完成"]
     Click Element    //XCUIElementTypeButton[@name="CheckoutResultViewController_completeBtn"]
     Element Should Be Enabled    //XCUIElementTypeOther[@name="ScheduleEventCell_0"]/XCUIElementTypeOther/XCUIElementTypeOther
-    Wait Until Element Is Visible    ${total}
     

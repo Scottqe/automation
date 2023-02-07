@@ -17,8 +17,8 @@ COMPANY_ID = os.getenv("COMPANY_ID", 1)
 
 # -------- CrossBrowserTesting Settings --------
 REMOTE = os.getenv("REMOTE", None)
-CBT_EMAIL = os.getenv("CBT_EMAIL", "grdv_stage1@talfin.ai")
-CBT_AUTHKEY = os.getenv("CBT_AUTHKEY", "u67959f3593e8a25")
+CBT_EMAIL = os.getenv("CBT_EMAIL", "")
+CBT_AUTHKEY = os.getenv("CBT_AUTHKEY", "")
 
 # -------- Environmnet Settings --------
 ENV = os.getenv("CI_COMMIT_BRANCH")

@@ -124,7 +124,7 @@ Swipe Item To Delete
 Add New Customer
     Create Random Variables
     Click Add Customer Button
-    Click Add New Customer Button
+    Click Add New Customer Button In Appointment Page
     Select Gender In Add New Customer Page
     Input Name In Add New Customer Page    ${firstName}
     Input Nick Name In Add New Customer Page    ${lastName}
